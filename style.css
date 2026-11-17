@@ -1,6 +1,6 @@
-/* =====================
+/* ========================================
    RESET
-===================== */
+======================================== */
 
 * {
     margin: 0;
@@ -8,27 +8,38 @@
     box-sizing: border-box;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
 
-body {
-    background-color: #0b0f14;
 
-    color: #ffffff;
+body {
+
+    background:
+        linear-gradient(
+            180deg,
+            #202833 0%,
+            #18212b 100%
+        );
+
+    color: #f5f7fa;
 
     font-family:
-        "Yu Gothic",
         "Segoe UI",
+        "Yu Gothic",
+        "Hiragino Kaku Gothic ProN",
         sans-serif;
 
     line-height: 1.8;
 }
 
+
 a {
     color: inherit;
     text-decoration: none;
 }
+
 
 img {
     display: block;
@@ -36,11 +47,12 @@ img {
 }
 
 
-/* =====================
+/* ========================================
    HEADER
-===================== */
+======================================== */
 
 header {
+
     position: fixed;
 
     top: 0;
@@ -48,388 +60,531 @@ header {
 
     width: 100%;
 
-    background-color: rgba(11, 15, 20, 0.95);
-
-    border-bottom: 1px solid #242a32;
-
     z-index: 1000;
+
+    background:
+        rgba(32, 40, 51, 0.82);
+
+    backdrop-filter: blur(18px);
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.08);
 }
+
 
 .header-inner {
-    max-width: 1100px;
 
-    margin: 0 auto;
+    max-width: 1180px;
 
-    padding: 20px;
+    margin: auto;
+
+    padding: 18px 30px;
 
     display: flex;
 
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 }
+
+
+/* LOGO */
 
 .logo {
-    font-size: 14px;
-    font-weight: bold;
 
-    letter-spacing: 3px;
-}
+    width: 45px;
+    height: 45px;
 
-nav {
     display: flex;
 
-    gap: 30px;
+    justify-content: center;
+    align-items: center;
+
+    background: #69d2ff;
+
+    color: #18212b;
+
+    font-weight: 900;
+
+    font-size: 15px;
+
+    border-radius: 12px;
+
+    letter-spacing: -1px;
 }
+
+
+/* NAV */
+
+nav {
+
+    display: flex;
+
+    gap: 35px;
+}
+
 
 nav a {
-    font-size: 12px;
 
-    color: #a0a7b0;
+    font-size: 11px;
+
+    font-weight: 600;
 
     letter-spacing: 2px;
+
+    color: #bcc6d2;
+
+    transition: 0.25s;
 }
+
 
 nav a:hover {
-    color: #5dd5ff;
+
+    color: #69d2ff;
 }
 
 
-/* =====================
-   SECTION
-===================== */
+/* ========================================
+   共通
+======================================== */
 
 section {
-    max-width: 1100px;
 
-    margin: 0 auto;
+    max-width: 1180px;
+
+    margin: auto;
 
     padding-left: 30px;
     padding-right: 30px;
 }
 
-.section-label {
-    color: #8c949f;
 
-    font-size: 13px;
+.section-number {
+
+    color: #69d2ff;
+
+    font-size: 11px;
+
+    font-weight: 700;
 
     letter-spacing: 3px;
 
-    margin-bottom: 40px;
-}
-
-.section-label span {
-    color: #5dd5ff;
-
-    margin-right: 15px;
+    margin-bottom: 16px;
 }
 
 
-/* =====================
-   ABOUT
-===================== */
+/* ========================================
+   HERO
+======================================== */
 
-.about {
-    padding-top: 180px;
-    padding-bottom: 120px;
+.hero {
+
+    min-height: 750px;
+
+    padding-top: 190px;
+    padding-bottom: 130px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
 }
 
-.about-main {
+
+.hero-label {
+
+    color: #69d2ff;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 75px;
+}
+
+
+.hero-main {
+
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:
+        1.2fr 1fr;
 
-    gap: 80px;
+    gap: 100px;
 
-    align-items: center;
+    align-items: end;
 }
 
-.sub-title {
-    color: #5dd5ff;
 
-    font-size: 13px;
+.hello {
 
-    letter-spacing: 4px;
+    color: #9aa7b5;
 
-    margin-bottom: 15px;
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 18px;
 }
 
-.about h1 {
-    font-size: 60px;
 
-    line-height: 1.3;
+.hero h1 {
 
-    margin-bottom: 10px;
+    font-size:
+        clamp(55px, 8vw, 100px);
+
+    line-height: 1;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 24px;
 }
+
 
 .english-name {
-    color: #717985;
 
-    letter-spacing: 4px;
-}
+    color: #8794a3;
 
-.about-description {
-    color: #b3bac4;
+    letter-spacing: 5px;
 
-    font-size: 16px;
+    font-size: 12px;
 }
 
 
-/* =====================
+.hero-description {
+
+    padding-bottom: 12px;
+}
+
+
+.hero-description h2 {
+
+    font-size: 30px;
+
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+}
+
+
+.hero-description p {
+
+    color: #aeb9c5;
+
+    font-size: 15px;
+
+    max-width: 450px;
+}
+
+
+/* ========================================
    HOMETOWN
-===================== */
+======================================== */
 
 .hometown {
-    padding-top: 50px;
-    padding-bottom: 150px;
+
+    padding-bottom: 160px;
 
     display: grid;
 
-    grid-template-columns: 1.2fr 1fr;
+    grid-template-columns:
+        1.5fr 0.8fr;
 
     gap: 70px;
 
     align-items: center;
 }
 
+
+/* IMAGE */
+
 .hometown-image {
-    width: 100%;
+
+    position: relative;
+
     aspect-ratio: 16 / 10;
+
     overflow: hidden;
-    border-radius: 12px;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 30px 70px
+        rgba(0,0,0,0.22);
 }
+
 
 .hometown-image img {
+
     width: 100%;
     height: 100%;
+
     object-fit: cover;
+
+    transition:
+        transform 0.8s ease;
 }
 
-.small-title {
-    color: #5dd5ff;
 
-    font-size: 12px;
+.hometown-image:hover img {
+
+    transform: scale(1.035);
+}
+
+
+/* INFO */
+
+.hometown-info {
+
+    padding: 30px 0;
+}
+
+
+.hometown-info h2 {
+
+    font-size:
+        clamp(32px, 4vw, 50px);
+
+    line-height: 1.4;
+
+    margin-bottom: 12px;
+}
+
+
+.hometown-sub {
+
+    color: #7b8794;
+
+    font-size: 11px;
 
     letter-spacing: 4px;
 
-    margin-bottom: 10px;
+    margin-bottom: 32px;
 }
 
-.hometown-content h2 {
-    font-size: 38px;
 
-    margin-bottom: 25px;
-}
+.hometown-info > p:last-child {
 
-.hometown-content p:not(.small-title) {
-    color: #a4acb7;
+    color: #aeb8c3;
 
-    margin-bottom: 15px;
+    font-size: 14px;
 }
 
 
 /* ========================================
-   FAVORITE
+   FAVORITES
 ======================================== */
 
-.favorite-section {
-    position: relative;
+.favorites {
 
     padding-top: 130px;
-    padding-bottom: 150px;
+    padding-bottom: 170px;
 
-    border-top: 1px solid #252b34;
+    border-top:
+        1px solid rgba(255,255,255,0.09);
+}
+
+
+.favorite-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    margin-bottom: 60px;
+}
+
+
+.favorite-header h2 {
+
+    font-size:
+        clamp(38px, 5vw, 60px);
+
+    letter-spacing: -2px;
+}
+
+
+.favorite-intro {
+
+    max-width: 390px;
+
+    color: #9eabb8;
+
+    font-size: 14px;
+}
+
+
+/* ========================================
+   FAVORITE BUTTON
+======================================== */
+
+.favorite-links {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+.favorite-link {
+
+    min-height: 360px;
+
+    padding: 35px;
+
+    border-radius: 24px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 
     overflow: hidden;
 }
 
 
-/* 背景に大きな番号 */
+/* GAME */
 
-.favorite-section::after {
-    position: absolute;
-
-    right: 20px;
-    bottom: -70px;
-
-    font-size: 280px;
-    font-weight: 700;
-
-    line-height: 1;
-
-    color: rgba(255, 255, 255, 0.018);
-
-    pointer-events: none;
-}
-
-#favorite-game::after {
-    content: "02";
-}
-
-#favorite-anime::after {
-    content: "03";
-}
-
-
-/* メイン部分 */
-
-.favorite-content {
-    position: relative;
-
-    max-width: 900px;
-
-    padding: 65px 70px;
+.game-link {
 
     background:
         linear-gradient(
             135deg,
-            rgba(22, 29, 38, 0.95),
-            rgba(13, 18, 24, 0.95)
+            #79d8fc 0%,
+            #4fa4dc 100%
         );
 
-    border: 1px solid #29313b;
-
-    border-radius: 4px;
-
-    overflow: hidden;
-
-    transition:
-        transform 0.3s ease,
-        border-color 0.3s ease;
+    color: #10202a;
 }
 
 
-/* 左側のアクセント */
+/* ANIME */
 
-.favorite-content::before {
-    content: "";
+.anime-link {
 
-    position: absolute;
+    background:
+        linear-gradient(
+            135deg,
+            #d9c9f8 0%,
+            #9a81d2 100%
+        );
 
-    top: 0;
-    left: 0;
-
-    width: 3px;
-    height: 100%;
-
-    background: #5dd5ff;
+    color: #241d30;
 }
 
 
-/* hover */
+/* HOVER */
 
-.favorite-content:hover {
-    transform: translateY(-5px);
+.favorite-link:hover {
 
-    border-color: #3e5361;
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 30px 60px
+        rgba(0,0,0,0.20);
 }
 
 
-/* 小見出し */
+/* TOP */
 
-.favorite-type {
-    color: #5dd5ff;
+.favorite-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.favorite-category {
 
     font-size: 11px;
-    font-weight: 600;
 
-    letter-spacing: 5px;
+    font-weight: 800;
 
-    margin-bottom: 25px;
+    letter-spacing: 3px;
 }
 
 
-/* 作品タイトル */
+.arrow {
 
-.favorite-info h2 {
-    font-size: clamp(42px, 7vw, 78px);
+    width: 45px;
+    height: 45px;
 
-    line-height: 1.15;
+    display: flex;
 
-    letter-spacing: -2px;
+    justify-content: center;
+    align-items: center;
 
-    margin-bottom: 25px;
-}
+    border:
+        1px solid rgba(0,0,0,0.22);
 
-
-/* 好きな理由 */
-
-.favorite-description {
-    position: relative;
-
-    color: #aab2bd;
+    border-radius: 50%;
 
     font-size: 18px;
 
-    letter-spacing: 1px;
-
-    padding-left: 35px;
+    transition: 0.3s;
 }
 
 
-/* 好きな理由の横線 */
+.favorite-link:hover .arrow {
 
-.favorite-description::before {
-    content: "";
+    transform:
+        translate(4px, -4px);
 
-    position: absolute;
-
-    width: 20px;
-    height: 1px;
-
-    left: 0;
-    top: 50%;
-
-    background: #5dd5ff;
-}
-
-
-/* ========================================
-   GAMEだけ少しアクセント
-======================================== */
-
-#favorite-game .favorite-info h2 {
     background:
-        linear-gradient(
-            90deg,
-            #ffffff,
-            #81ddff
-        );
-
-    background-clip: text;
-    -webkit-background-clip: text;
-
-    color: transparent;
+        rgba(255,255,255,0.3);
 }
 
 
-/* ========================================
-   ANIME
-======================================== */
+/* BOTTOM */
 
-#favorite-anime .favorite-content::before {
-    background: #b58cff;
+.favorite-bottom > p {
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    opacity: 0.65;
+
+    margin-bottom: 8px;
 }
 
-#favorite-anime .favorite-type {
-    color: #b58cff;
+
+.favorite-bottom h3 {
+
+    font-size:
+        clamp(38px, 5vw, 60px);
+
+    line-height: 1.2;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 16px;
 }
 
-#favorite-anime .favorite-description::before {
-    background: #b58cff;
-}
 
-#favorite-anime .favorite-info h2 {
-    background:
-        linear-gradient(
-            90deg,
-            #ffffff,
-            #cfb3ff
-        );
+.favorite-bottom > span {
 
-    background-clip: text;
-    -webkit-background-clip: text;
+    font-size: 14px;
 
-    color: transparent;
+    opacity: 0.75;
 }
 
 
@@ -438,44 +593,183 @@ section {
 ======================================== */
 
 footer {
-    padding: 70px 20px;
 
-    text-align: center;
+    max-width: 1180px;
 
-    border-top: 1px solid #252b34;
+    margin: auto;
 
-    color: #59626e;
+    padding:
+        50px 30px 65px;
 
-    font-size: 11px;
+    border-top:
+        1px solid rgba(255,255,255,0.09);
 
-    letter-spacing: 4px;
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #768390;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+
+footer a {
+
+    transition: 0.25s;
+}
+
+
+footer a:hover {
+
+    color: #69d2ff;
 }
 
 
 /* ========================================
-   スマートフォン
+   TABLET / SMARTPHONE
 ======================================== */
 
 @media (max-width: 768px) {
 
-    .favorite-section {
-        padding-top: 80px;
+    .header-inner {
+
+        padding: 15px 20px;
+    }
+
+
+    .logo {
+
+        width: 40px;
+        height: 40px;
+    }
+
+
+    nav {
+
+        gap: 15px;
+    }
+
+
+    nav a {
+
+        font-size: 8px;
+
+        letter-spacing: 1px;
+    }
+
+
+    section {
+
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+
+        min-height: auto;
+
+        padding-top: 160px;
         padding-bottom: 100px;
     }
 
-    .favorite-content {
-        padding: 45px 30px;
+
+    .hero-label {
+
+        margin-bottom: 50px;
     }
 
-    .favorite-info h2 {
-        font-size: 42px;
+
+    .hero-main {
+
+        grid-template-columns: 1fr;
+
+        gap: 55px;
     }
 
-    .favorite-description {
-        font-size: 15px;
+
+    .hero h1 {
+
+        font-size: 55px;
+
+        letter-spacing: -3px;
     }
 
-    .favorite-section::after {
-        font-size: 150px;
+
+    .hero-description h2 {
+
+        font-size: 23px;
     }
+
+
+    /* HOMETOWN */
+
+    .hometown {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        padding-bottom: 110px;
+    }
+
+
+    .hometown-image {
+
+        border-radius: 18px;
+    }
+
+
+    /* FAVORITE */
+
+    .favorites {
+
+        padding-top: 90px;
+
+        padding-bottom: 110px;
+    }
+
+
+    .favorite-header {
+
+        display: block;
+
+        margin-bottom: 40px;
+    }
+
+
+    .favorite-intro {
+
+        margin-top: 20px;
+    }
+
+
+    .favorite-links {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .favorite-link {
+
+        min-height: 300px;
+
+        padding: 28px;
+    }
+
+
+    footer {
+
+        margin-left: 20px;
+        margin-right: 20px;
+
+        padding-left: 0;
+        padding-right: 0;
+    }
+
 }

@@ -10,46 +10,47 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
-    <!-- ヘッダー -->
+    <!-- HEADER -->
     <header>
+
         <div class="header-inner">
 
-            <a href="#" class="logo">
-                KAYAMORI YOSHIHIRO
+            <a href="index.html" class="logo">
+                YK.
             </a>
 
             <nav>
                 <a href="#about">ABOUT</a>
-                <a href="#favorite-game">GAME</a>
-                <a href="#favorite-anime">ANIME</a>
+                <a href="#hometown">HOMETOWN</a>
+                <a href="#favorite">FAVORITE</a>
             </nav>
 
         </div>
+
     </header>
 
 
     <main>
 
-        <!-- =====================
+        <!-- =========================
              ABOUT
-        ====================== -->
+        ========================== -->
 
-        <section id="about" class="about">
+        <section id="about" class="hero">
 
-            <div class="section-label">
-                <span>01</span>
-                ABOUT
+            <div class="hero-label">
+                GAME PROGRAMMER PORTFOLIO
             </div>
 
+            <div class="hero-main">
 
-            <div class="about-main">
+                <div class="hero-title">
 
-                <div class="about-title">
-
-                    <p class="sub-title">
-                        GAME PROGRAMMER
+                    <p class="hello">
+                        HELLO, I'M
                     </p>
 
                     <h1>
@@ -57,17 +58,22 @@
                     </h1>
 
                     <p class="english-name">
-                        KAYAMORI YOSHIHIRO
+                        YOSHIHIRO KAYAMORI
                     </p>
 
                 </div>
 
 
-                <div class="about-description">
+                <div class="hero-description">
+
+                    <h2>
+                        ゲームを通して、<br>
+                        面白い体験をつくりたい。
+                    </h2>
 
                     <p>
                         ゲームプログラマーを目指して、
-                        C++やDirectX11を中心に
+                        C++ / DirectX11を中心に
                         ゲーム制作・プログラミングを学んでいます。
                     </p>
 
@@ -78,11 +84,11 @@
         </section>
 
 
-        <!-- =====================
-             富山
-        ====================== -->
+        <!-- =========================
+             HOMETOWN
+        ========================== -->
 
-        <section class="hometown">
+        <section id="hometown" class="hometown">
 
             <div class="hometown-image">
 
@@ -93,22 +99,24 @@
             </div>
 
 
-            <div class="hometown-content">
+            <div class="hometown-info">
 
-                <p class="small-title">
-                    HOMETOWN
+                <p class="section-number">
+                    01 / HOMETOWN
                 </p>
 
                 <h2>
-                    富山県中新川郡立山町 出身。
+                    富山県<br>
+                    中新川郡立山町
                 </h2>
 
-                <p>
-                    自然豊かな富山県で育ちました。
+                <p class="hometown-sub">
+                    TOYAMA, JAPAN
                 </p>
 
                 <p>
-                    現在は、ゲームプログラマーを目指し、
+                    自然豊かな富山県で育ちました。
+                    現在はゲームプログラマーを目指し、
                     東京都で一人暮らしをしています。
                 </p>
 
@@ -117,80 +125,129 @@
         </section>
 
 
-<!-- =====================
-     好きなゲーム
-====================== -->
+        <!-- =========================
+             FAVORITES
+        ========================== -->
 
-<section id="favorite-game" class="favorite-section">
+        <section id="favorite" class="favorites">
 
-    <div class="section-label">
-        <span>02</span>
-        FAVORITE GAME
-    </div>
+            <div class="favorite-header">
 
-    <div class="favorite-content">
+                <div>
 
-        <div class="favorite-info">
+                    <p class="section-number">
+                        02 / FAVORITES
+                    </p>
 
-            <p class="favorite-type">
-                MY FAVORITE GAME
-            </p>
+                    <h2>
+                        MY FAVORITES
+                    </h2>
 
-            <h2>
-                Xenoblade
-            </h2>
-
-            <p class="favorite-description">
-                人生を変えてくれたゲーム
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
+                </div>
 
 
-<!-- =====================
-     好きなアニメ
-====================== -->
+                <p class="favorite-intro">
+                    自分に大きな影響を与えてくれた、
+                    大切なゲームとアニメです。
+                </p>
 
-<section id="favorite-anime" class="favorite-section">
+            </div>
 
-    <div class="section-label">
-        <span>03</span>
-        FAVORITE ANIME
-    </div>
 
-    <div class="favorite-content">
+            <!-- FAVORITE BUTTONS -->
 
-        <div class="favorite-info">
+            <div class="favorite-links">
 
-            <p class="favorite-type">
-                MY FAVORITE ANIME
-            </p>
 
-            <h2>
-                狼と香辛料
-            </h2>
+                <!-- GAME -->
 
-            <p class="favorite-description">
-                "好き"をくれた作品
+                <a href="game.html"
+                   class="favorite-link game-link">
 
-            </p>
+                    <div class="favorite-top">
 
-        </div>
+                        <span class="favorite-category">
+                            FAVORITE GAME
+                        </span>
 
-    </div>
+                        <span class="arrow">
+                            ↗
+                        </span>
 
-</section>
+                    </div>
+
+
+                    <div class="favorite-bottom">
+
+                        <p>MY FAVORITE</p>
+
+                        <h3>
+                            Xenoblade
+                        </h3>
+
+                        <span>
+                            人生を変えてくれたゲーム
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <!-- ANIME -->
+
+                <a href="anime.html"
+                   class="favorite-link anime-link">
+
+                    <div class="favorite-top">
+
+                        <span class="favorite-category">
+                            FAVORITE ANIME
+                        </span>
+
+                        <span class="arrow">
+                            ↗
+                        </span>
+
+                    </div>
+
+
+                    <div class="favorite-bottom">
+
+                        <p>MY FAVORITE</p>
+
+                        <h3>
+                            狼と香辛料
+                        </h3>
+
+                        <span>
+                            「好き」をくれた作品
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+            </div>
+
+        </section>
 
     </main>
 
 
     <footer>
-        © 2026 KAYAMORI YOSHIHIRO
+
+        <p>
+            © 2026 YOSHIHIRO KAYAMORI
+        </p>
+
+        <a href="#">
+            BACK TO TOP ↑
+        </a>
+
     </footer>
+
 
 </body>
 
