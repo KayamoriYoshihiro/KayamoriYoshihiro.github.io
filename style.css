@@ -90,28 +90,28 @@ header {
 /* LOGO */
 
 .logo {
+    width: auto;
+    height: auto;
 
-    width: 45px;
-    height: 45px;
+    display: inline-block;
 
-    display: flex;
+    background: transparent;
 
-    justify-content: center;
-    align-items: center;
+    color: #f5f7fa;
 
-    background: #69d2ff;
+    font-size: 14px;
+    font-weight: 800;
 
-    color: #18212b;
+    letter-spacing: 3px;
 
-    font-weight: 900;
+    border-radius: 0;
 
-    font-size: 15px;
-
-    border-radius: 12px;
-
-    letter-spacing: -1px;
+    transition: color 0.25s ease;
 }
 
+.logo:hover {
+    color: #69d2ff;
+}
 
 /* NAV */
 
@@ -434,10 +434,9 @@ section {
 
 
 .favorite-link {
+    min-height: 320px;
 
-    min-height: 360px;
-
-    padding: 35px;
+    padding: 38px;
 
     border-radius: 24px;
 
@@ -454,11 +453,9 @@ section {
     overflow: hidden;
 }
 
-
 /* GAME */
 
 .game-link {
-
     background:
         linear-gradient(
             135deg,
@@ -469,11 +466,9 @@ section {
     color: #10202a;
 }
 
-
 /* ANIME */
 
 .anime-link {
-
     background:
         linear-gradient(
             135deg,
@@ -482,6 +477,32 @@ section {
         );
 
     color: #241d30;
+}
+
+/* BRAND */
+
+.brand-link {
+    background:
+        linear-gradient(
+            135deg,
+            #ffd79a 0%,
+            #e7a85c 100%
+        );
+
+    color: #322318;
+}
+
+/* HOBBY */
+
+.hobby-link {
+    background:
+        linear-gradient(
+            135deg,
+            #9ce5cf 0%,
+            #59bea3 100%
+        );
+
+    color: #153128;
 }
 
 
@@ -511,14 +532,12 @@ section {
 
 
 .favorite-category {
-
-    font-size: 11px;
+    font-size: 16px;
 
     font-weight: 800;
 
-    letter-spacing: 3px;
+    letter-spacing: 4px;
 }
-
 
 .arrow {
 
@@ -553,20 +572,6 @@ section {
 
 /* BOTTOM */
 
-.favorite-bottom > p {
-
-    font-size: 10px;
-
-    font-weight: 700;
-
-    letter-spacing: 3px;
-
-    opacity: 0.65;
-
-    margin-bottom: 8px;
-}
-
-
 .favorite-bottom h3 {
 
     font-size:
@@ -581,12 +586,16 @@ section {
 
 
 .favorite-bottom > span {
+    display: block;
 
-    font-size: 14px;
+    font-size: 18px;
 
-    opacity: 0.75;
+    font-weight: 500;
+
+    line-height: 1.7;
+
+    opacity: 0.8;
 }
-
 
 /* ========================================
    FOOTER
