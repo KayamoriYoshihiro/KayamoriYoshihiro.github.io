@@ -3,29 +3,44 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>榧森由浩 | Portfolio</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+          href="style.css">
 </head>
 
 
-<body>
+<body class="home-page">
 
     <!-- HEADER -->
     <header>
 
         <div class="header-inner">
 
-            <a href="index.html" class="logo">
+            <a href="index.html"
+               class="logo">
                 KAYAMORI YOSHIHIRO
             </a>
 
             <nav>
-                <a href="#about">ABOUT</a>
-                <a href="#hometown">HOMETOWN</a>
-                <a href="#favorite">FAVORITE</a>
+
+                <a href="index.html">
+                    HOME
+                </a>
+
+                <a href="about.html">
+                    ABOUT
+                </a>
+
+                <!-- 後で追加 -->
+                <a href="works.html">
+                    WORKS
+                </a>
+
             </nav>
 
         </div>
@@ -33,262 +48,60 @@
     </header>
 
 
-    <main>
+    <!-- MAIN -->
+    <main class="home-main">
 
-        <!-- =========================
-             ABOUT
-        ========================== -->
+        <div class="home-content">
 
-        <section id="about" class="hero">
-
-            <div class="hero-label">
+            <p class="home-label">
                 GAME PROGRAMMER PORTFOLIO
-            </div>
-
-            <div class="hero-main">
-
-                <div class="hero-title">
-
-                    <p class="hello">
-                        HELLO, I'M
-                    </p>
-
-                    <h1>
-                        榧森 由浩
-                    </h1>
-
-                    <p class="english-name">
-                        KAYAMORI YOSHIHIRO
-                    </p>
-
-                </div>
-
-
-                <div class="hero-description">
-
-                    <h2>
-                        ゲームを通して、<br>
-                        面白い体験をつくりたい。
-                    </h2>
-
-                    <p>
-                        ゲームプログラマーを目指して、
-                        C++ / DirectX11を中心に
-                        ゲーム制作・プログラミングを学んでいます。
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             HOMETOWN
-        ========================== -->
-
-        <section id="hometown" class="hometown">
-
-            <div class="hometown-image">
-
-                <img
-                    src="images/toyama.jpg"
-                    alt="富山の風景">
-
-            </div>
-
-
-            <div class="hometown-info">
-
-                <p class="section-number">
-                    01 / HOMETOWN
-                </p>
-
-                <h2>
-                    富山県<br>
-                    中新川郡立山町
-                </h2>
-
-                <p class="hometown-sub">
-                    TOYAMA, JAPAN
-                </p>
-
-                <p>
-                    自然豊かな富山県で育ちました。
-                    現在はゲームプログラマーを目指し、
-                    東京都で一人暮らしをしています。
-                </p>
-
-            </div>
-
-        </section>
-
-
-<!-- =========================
-     FAVORITES
-========================== -->
-
-<section id="favorite" class="favorites">
-
-    <div class="favorite-header">
-
-        <div>
-            <p class="section-number">
-                02 / FAVORITES
             </p>
 
-            <h2>
-                MY FAVORITES
-            </h2>
+
+            <h1>
+                榧森 由浩
+            </h1>
+
+
+            <p class="home-name">
+                KAYAMORI YOSHIHIRO
+            </p>
+
+
+            <div class="home-links">
+
+                <a href="about.html"
+                   class="home-button">
+
+                    ABOUT ME
+
+                    <span>
+                        ↗
+                    </span>
+
+                </a>
+
+
+                <a href="works.html"
+                   class="home-button secondary">
+
+                    MY WORKS
+
+                    <span>
+                        ↗
+                    </span>
+
+                </a>
+
+            </div>
+
         </div>
 
-        <p class="favorite-intro">
-            自分の考え方や感性に影響を与えてくれた、
-            好きなものを紹介します。
-        </p>
 
-    </div>
+        <div class="home-decoration">
+            PORTFOLIO
+        </div>
 
-
-    <div class="favorite-links">
-
-
-        <!-- GAME -->
-
-        <a href="game.html"
-           class="favorite-link game-link">
-
-            <div class="favorite-top">
-
-                <span class="favorite-category">
-                    FAVORITE GAME
-                </span>
-
-                <span class="arrow">
-                    ↗
-                </span>
-
-            </div>
-
-
-            <div class="favorite-bottom">
-
-                <h3>
-                    Xenoblade
-                </h3>
-
-                <span>
-                    人生を変えてくれたゲーム
-                </span>
-
-            </div>
-
-        </a>
-
-
-        <!-- ANIME -->
-
-        <a href="anime.html"
-           class="favorite-link anime-link">
-
-            <div class="favorite-top">
-
-                <span class="favorite-category">
-                    FAVORITE ANIME
-                </span>
-
-                <span class="arrow">
-                    ↗
-                </span>
-
-            </div>
-
-
-            <div class="favorite-bottom">
-
-                <h3>
-                    狼と香辛料
-                </h3>
-
-                <span>
-                    「好き」をくれた作品
-                </span>
-
-            </div>
-
-        </a>
-
-
-        <!-- BRAND -->
-
-        <a href="brand.html"
-           class="favorite-link brand-link">
-
-            <div class="favorite-top">
-
-                <span class="favorite-category">
-                    FAVORITE BRAND
-                </span>
-
-                <span class="arrow">
-                    ↗
-                </span>
-
-            </div>
-
-
-            <div class="favorite-bottom">
-
-                <h3>
-                    BRAND
-                </h3>
-
-                <span>
-                    自分の好きなブランド
-                </span>
-
-            </div>
-
-        </a>
-
-
-        <!-- HOBBY -->
-
-        <a href="hobby.html"
-           class="favorite-link hobby-link">
-
-            <div class="favorite-top">
-
-                <span class="favorite-category">
-                    HOBBY
-                </span>
-
-                <span class="arrow">
-                    ↗
-                </span>
-
-            </div>
-
-
-            <div class="favorite-bottom">
-
-                <h3>
-                    HOBBY
-                </h3>
-
-                <span>
-                    自分が夢中になれること
-                </span>
-
-            </div>
-
-        </a>
-
-
-    </div>
-
-</section>
     </main>
 
 
@@ -298,12 +111,7 @@
             © 2026 KAYAMORI YOSHIHIRO
         </p>
 
-        <a href="#">
-            BACK TO TOP ↑
-        </a>
-
     </footer>
-
 
 </body>
 
