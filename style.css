@@ -227,168 +227,255 @@ section {
 }
 
 
-/* =====================
+/* ========================================
    FAVORITE
-===================== */
+======================================== */
 
 .favorite-section {
-    padding-top: 120px;
-    padding-bottom: 140px;
+    position: relative;
+
+    padding-top: 130px;
+    padding-bottom: 150px;
 
     border-top: 1px solid #252b34;
-}
 
-.favorite-header {
-    margin-bottom: 50px;
-}
-
-.favorite-header h2 {
-    font-size: 38px;
-
-    margin-bottom: 15px;
-}
-
-.favorite-header p {
-    color: #a0a8b3;
-
-    max-width: 700px;
+    overflow: hidden;
 }
 
 
-/* =====================
-   FAVORITE CARD
-===================== */
+/* 背景に大きな番号 */
 
-.favorite-grid {
-    display: grid;
+.favorite-section::after {
+    position: absolute;
 
-    grid-template-columns: repeat(3, 1fr);
+    right: 20px;
+    bottom: -70px;
 
-    gap: 20px;
+    font-size: 280px;
+    font-weight: 700;
+
+    line-height: 1;
+
+    color: rgba(255, 255, 255, 0.018);
+
+    pointer-events: none;
 }
 
-.favorite-card {
-    background-color: #11171f;
+#favorite-game::after {
+    content: "02";
+}
+
+#favorite-anime::after {
+    content: "03";
+}
+
+
+/* メイン部分 */
+
+.favorite-content {
+    position: relative;
+
+    max-width: 900px;
+
+    padding: 65px 70px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(22, 29, 38, 0.95),
+            rgba(13, 18, 24, 0.95)
+        );
 
     border: 1px solid #29313b;
 
-    min-height: 250px;
+    border-radius: 4px;
 
-    padding: 30px;
+    overflow: hidden;
 
-    transition: 0.25s;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
 }
 
-.favorite-card:hover {
+
+/* 左側のアクセント */
+
+.favorite-content::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 3px;
+    height: 100%;
+
+    background: #5dd5ff;
+}
+
+
+/* hover */
+
+.favorite-content:hover {
     transform: translateY(-5px);
 
-    border-color: #5dd5ff;
-
-    background-color: #151d26;
+    border-color: #3e5361;
 }
 
-.favorite-card span {
+
+/* 小見出し */
+
+.favorite-type {
     color: #5dd5ff;
 
     font-size: 11px;
+    font-weight: 600;
 
-    letter-spacing: 2px;
-}
+    letter-spacing: 5px;
 
-.favorite-card h3 {
-    font-size: 21px;
-
-    margin-top: 45px;
-    margin-bottom: 15px;
-}
-
-.favorite-card p {
-    color: #929ba7;
-
-    font-size: 14px;
+    margin-bottom: 25px;
 }
 
 
-/* =====================
+/* 作品タイトル */
+
+.favorite-info h2 {
+    font-size: clamp(42px, 7vw, 78px);
+
+    line-height: 1.15;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 25px;
+}
+
+
+/* 好きな理由 */
+
+.favorite-description {
+    position: relative;
+
+    color: #aab2bd;
+
+    font-size: 18px;
+
+    letter-spacing: 1px;
+
+    padding-left: 35px;
+}
+
+
+/* 好きな理由の横線 */
+
+.favorite-description::before {
+    content: "";
+
+    position: absolute;
+
+    width: 20px;
+    height: 1px;
+
+    left: 0;
+    top: 50%;
+
+    background: #5dd5ff;
+}
+
+
+/* ========================================
+   GAMEだけ少しアクセント
+======================================== */
+
+#favorite-game .favorite-info h2 {
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #81ddff
+        );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+}
+
+
+/* ========================================
+   ANIME
+======================================== */
+
+#favorite-anime .favorite-content::before {
+    background: #b58cff;
+}
+
+#favorite-anime .favorite-type {
+    color: #b58cff;
+}
+
+#favorite-anime .favorite-description::before {
+    background: #b58cff;
+}
+
+#favorite-anime .favorite-info h2 {
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #cfb3ff
+        );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+}
+
+
+/* ========================================
    FOOTER
-===================== */
+======================================== */
 
 footer {
-    text-align: center;
+    padding: 70px 20px;
 
-    padding: 50px 20px;
+    text-align: center;
 
     border-top: 1px solid #252b34;
 
-    color: #626b77;
+    color: #59626e;
 
     font-size: 11px;
 
-    letter-spacing: 3px;
+    letter-spacing: 4px;
 }
 
 
-/* =====================
-   SMARTPHONE
-===================== */
+/* ========================================
+   スマートフォン
+======================================== */
 
 @media (max-width: 768px) {
-
-    .header-inner {
-        padding: 18px;
-    }
-
-    .logo {
-        font-size: 10px;
-    }
-
-    nav {
-        gap: 12px;
-    }
-
-    nav a {
-        font-size: 9px;
-    }
-
-
-    section {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-
-    .about {
-        padding-top: 140px;
-        padding-bottom: 80px;
-    }
-
-    .about-main {
-        grid-template-columns: 1fr;
-
-        gap: 40px;
-    }
-
-    .about h1 {
-        font-size: 42px;
-    }
-
-
-    .hometown {
-        grid-template-columns: 1fr;
-
-        gap: 35px;
-
-        padding-bottom: 100px;
-    }
-
-
-    .favorite-grid {
-        grid-template-columns: 1fr;
-    }
-
 
     .favorite-section {
         padding-top: 80px;
         padding-bottom: 100px;
+    }
+
+    .favorite-content {
+        padding: 45px 30px;
+    }
+
+    .favorite-info h2 {
+        font-size: 42px;
+    }
+
+    .favorite-description {
+        font-size: 15px;
+    }
+
+    .favorite-section::after {
+        font-size: 150px;
     }
 }
