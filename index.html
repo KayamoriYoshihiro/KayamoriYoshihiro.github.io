@@ -5,10 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>榧森由浩 | Game Programmer Portfolio</title>
-
-    <meta name="description"
-        content="ゲームプログラマーを目指す榧森由浩のポートフォリオサイトです。C++、DirectX11を中心にゲーム制作を行っています。">
+    <title>榧森由浩 | Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -16,17 +13,17 @@
 <body>
 
     <!-- ヘッダー -->
-    <header class="header">
+    <header>
         <div class="header-inner">
 
             <a href="#" class="logo">
-                KAYAMORI YOSHIHIRO
+                YOSHIHIRO KAYAMORI
             </a>
 
-            <nav class="nav">
+            <nav>
                 <a href="#about">ABOUT</a>
-                <a href="#skills">SKILLS</a>
-                <a href="#works">WORKS</a>
+                <a href="#favorite-games">GAME</a>
+                <a href="#favorite-anime">ANIME</a>
             </nav>
 
         </div>
@@ -35,81 +32,43 @@
 
     <main>
 
-        <!-- =========================
-             メインビジュアル
-        ========================== -->
-        <section class="hero">
-
-            <div class="hero-content">
-
-                <p class="hero-subtitle">
-                    GAME PROGRAMMER PORTFOLIO
-                </p>
-
-                <h1>
-                    KAYAMORI<br>
-                    YOSHIHIRO
-                </h1>
-
-                <p class="hero-description">
-                    C++ / DirectX11を中心に、<br>
-                    3Dゲームプログラミングを学んでいます。
-                </p>
-
-                <a href="#about" class="hero-button">
-                    ABOUT ME
-                </a>
-
-            </div>
-
-            <div class="hero-decoration">
-                <span>01</span>
-            </div>
-
-        </section>
-
-
-        <!-- =========================
+        <!-- =====================
              ABOUT
-        ========================== -->
-        <section id="about" class="section">
+        ====================== -->
 
-            <div class="section-title">
+        <section id="about" class="about">
+
+            <div class="section-label">
                 <span>01</span>
-                <h2>ABOUT</h2>
+                ABOUT
             </div>
 
-            <div class="about">
 
-                <div class="about-name">
+            <div class="about-main">
 
-                    <p class="name-japanese">
-                        榧森 由浩
+                <div class="about-title">
+
+                    <p class="sub-title">
+                        GAME PROGRAMMER
                     </p>
 
-                    <p class="name-english">
+                    <h1>
+                        榧森 由浩
+                    </h1>
+
+                    <p class="english-name">
                         YOSHIHIRO KAYAMORI
                     </p>
 
                 </div>
 
 
-                <div class="about-text">
+                <div class="about-description">
 
                     <p>
                         ゲームプログラマーを目指して、
-                        C++とDirectX11を中心にゲーム制作を行っています。
-                    </p>
-
-                    <p>
-                        特に3Dグラフィックス、キャラクター制御、
-                        アニメーションなどの技術に興味があります。
-                    </p>
-
-                    <p>
-                        現在はDirectX11を使用し、
-                        3Dキャラクターのボーン制御や
-                        キャラクター表現について研究・制作しています。
+                        C++やDirectX11を中心に
+                        ゲーム制作・プログラミングを学んでいます。
                     </p>
 
                 </div>
@@ -119,133 +78,202 @@
         </section>
 
 
-        <!-- =========================
-             SKILLS
-        ========================== -->
-        <section id="skills" class="section section-dark">
+        <!-- =====================
+             富山
+        ====================== -->
 
-            <div class="section-title">
+        <section class="hometown">
+
+            <div class="hometown-image">
+
+                <img
+                    src="images/toyama.jpg"
+                    alt="富山の風景">
+
+            </div>
+
+
+            <div class="hometown-content">
+
+                <p class="small-title">
+                    HOMETOWN
+                </p>
+
+                <h2>
+                    富山県出身。
+                </h2>
+
+                <p>
+                    自然豊かな富山県で育ちました。
+                </p>
+
+                <p>
+                    現在はゲームプログラマーを目指し、
+                    ゲーム制作や3Dプログラミングを学んでいます。
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================
+             好きなゲーム
+        ====================== -->
+
+        <section
+            id="favorite-games"
+            class="favorite-section">
+
+            <div class="section-label">
                 <span>02</span>
-                <h2>SKILLS</h2>
+                FAVORITE GAME
             </div>
 
 
-            <div class="skill-grid">
+            <div class="favorite-header">
 
-                <div class="skill-card">
+                <h2>
+                    好きなゲーム
+                </h2>
 
-                    <p class="skill-number">01</p>
-
-                    <h3>PROGRAMMING</h3>
-
-                    <p class="skill-main">
-                        C++
-                    </p>
-
-                    <p>
-                        C# / Java / JavaScript
-                    </p>
-
-                </div>
-
-
-                <div class="skill-card">
-
-                    <p class="skill-number">02</p>
-
-                    <h3>GRAPHICS</h3>
-
-                    <p class="skill-main">
-                        DirectX11
-                    </p>
-
-                    <p>
-                        HLSL / 3D Graphics
-                    </p>
-
-                </div>
-
-
-                <div class="skill-card">
-
-                    <p class="skill-number">03</p>
-
-                    <h3>GAME ENGINE</h3>
-
-                    <p class="skill-main">
-                        Unreal Engine 5
-                    </p>
-
-                    <p>
-                        Unity
-                    </p>
-
-                </div>
-
-
-                <div class="skill-card">
-
-                    <p class="skill-number">04</p>
-
-                    <h3>TOOLS</h3>
-
-                    <p class="skill-main">
-                        Visual Studio
-                    </p>
-
-                    <p>
-                        GitHub / Maya / VS Code
-                    </p>
-
-                </div>
+                <p>
+                    ゲームを「遊ぶ」だけでなく、
+                    キャラクターの動きやゲームシステム、
+                    グラフィックスにも注目して遊んでいます。
+                </p>
 
             </div>
 
-        </section>
 
+            <div class="favorite-grid">
 
-        <!-- =========================
-             WORKS
-        ========================== -->
-        <section id="works" class="section">
+                <div class="favorite-card">
 
-            <div class="section-title">
-                <span>03</span>
-                <h2>WORKS</h2>
-            </div>
-
-
-            <div class="work-card">
-
-                <div class="work-image">
-
-                    <!-- 後でゲーム画像に置き換える -->
-                    <div class="image-placeholder">
-                        KEMOMIMI
-                    </div>
-
-                </div>
-
-
-                <div class="work-content">
-
-                    <p class="work-category">
-                        DirectX11 / C++
-                    </p>
+                    <span>GAME 01</span>
 
                     <h3>
-                        KEMOMIMI
+                        ゲームタイトル
                     </h3>
 
                     <p>
-                        DirectX11を使用した3D作品です。
-                        キャラクターの耳などの自然な動きを表現するため、
-                        ボーン制御を用いたキャラクター表現を研究しています。
+                        好きな理由や、
+                        特に印象に残っている部分を書きます。
                     </p>
 
-                    <a href="#" class="work-button">
-                        VIEW PROJECT
-                    </a>
+                </div>
+
+
+                <div class="favorite-card">
+
+                    <span>GAME 02</span>
+
+                    <h3>
+                        ゲームタイトル
+                    </h3>
+
+                    <p>
+                        ゲームシステムや、
+                        キャラクターについて書きます。
+                    </p>
+
+                </div>
+
+
+                <div class="favorite-card">
+
+                    <span>GAME 03</span>
+
+                    <h3>
+                        ゲームタイトル
+                    </h3>
+
+                    <p>
+                        自分がゲーム制作で
+                        影響を受けた部分などを書きます。
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================
+             好きなアニメ
+        ====================== -->
+
+        <section
+            id="favorite-anime"
+            class="favorite-section anime-section">
+
+            <div class="section-label">
+                <span>03</span>
+                FAVORITE ANIME
+            </div>
+
+
+            <div class="favorite-header">
+
+                <h2>
+                    好きなアニメ
+                </h2>
+
+                <p>
+                    キャラクターや世界観、
+                    アニメーション表現などが好きな作品です。
+                </p>
+
+            </div>
+
+
+            <div class="favorite-grid">
+
+                <div class="favorite-card">
+
+                    <span>ANIME 01</span>
+
+                    <h3>
+                        アニメタイトル
+                    </h3>
+
+                    <p>
+                        好きなキャラクターや
+                        好きなポイントを書きます。
+                    </p>
+
+                </div>
+
+
+                <div class="favorite-card">
+
+                    <span>ANIME 02</span>
+
+                    <h3>
+                        アニメタイトル
+                    </h3>
+
+                    <p>
+                        世界観やストーリーなど、
+                        好きな理由を書きます。
+                    </p>
+
+                </div>
+
+
+                <div class="favorite-card">
+
+                    <span>ANIME 03</span>
+
+                    <h3>
+                        アニメタイトル
+                    </h3>
+
+                    <p>
+                        特に印象に残っている
+                        ポイントを書きます。
+                    </p>
 
                 </div>
 
@@ -256,13 +284,8 @@
     </main>
 
 
-    <!-- フッター -->
     <footer>
-
-        <p>
-            © 2026 YOSHIHIRO KAYAMORI
-        </p>
-
+        © 2026 YOSHIHIRO KAYAMORI
     </footer>
 
 </body>
