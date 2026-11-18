@@ -46,8 +46,6 @@
     justify-content: center;
 
     gap: 8px;
-
-    transform: scale(1.08);
 }
 
 
@@ -105,30 +103,44 @@
 ======================================== */
 
 /* 1段目：左 */
+
 .row-1 .figure-track {
     animation:
         figure-scroll
-        42s
+        44s
         linear
         infinite;
 }
 
 
 /* 2段目：右 */
+
 .row-2 .figure-track {
     animation:
         figure-scroll-reverse
-        53s
+        56s
         linear
         infinite;
 }
 
 
 /* 3段目：左 */
+
 .row-3 .figure-track {
     animation:
         figure-scroll
-        47s
+        49s
+        linear
+        infinite;
+}
+
+
+/* 4段目：右 */
+
+.row-4 .figure-track {
+    animation:
+        figure-scroll-reverse
+        52s
         linear
         infinite;
 }
@@ -139,18 +151,17 @@
 ======================================== */
 
 .figure-track img {
-    width: 320px;
+    width: clamp(360px, 24vw, 460px);
 
     aspect-ratio: 4 / 3;
     height: auto;
 
     display: block;
-
     flex-shrink: 0;
 
     object-fit: cover;
 
-    border-radius: 6px;
+    border-radius: 8px;
 
     filter:
         saturate(0.85)
@@ -163,7 +174,6 @@
 ======================================== */
 
 @keyframes figure-scroll {
-
     from {
         transform: translate3d(0, 0, 0);
     }
@@ -179,7 +189,6 @@
 
 
 @keyframes figure-scroll-reverse {
-
     from {
         transform: translate3d(
             -33.333333%,
@@ -191,57 +200,6 @@
     to {
         transform: translate3d(0, 0, 0);
     }
-}
-
-/* ========================================
-   IMAGE
-======================================== */
-
-.figure-track img {
-    width: 320px;
-    aspect-ratio: 4 / 3;
-    height: auto;
-
-    flex-shrink: 0;
-
-    object-fit: cover;
-
-    border-radius: 6px;
-
-    filter:
-        saturate(0.85)
-        brightness(0.8);
-}
-
-
-
-/* ========================================
-   ANIMATION
-======================================== */
-
-@keyframes figure-scroll {
-
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(-33.333333%);
-    }
-
-}
-
-
-@keyframes figure-scroll-reverse {
-
-    from {
-        transform: translateX(-33.333333%);
-    }
-
-    to {
-        transform: translateX(0);
-    }
-
 }
 
 
@@ -284,7 +242,6 @@
     padding: 40px;
 }
 
-
 /* MY HOBBY */
 
 .figure-label {
@@ -299,7 +256,6 @@
 
     margin-bottom: 25px;
 }
-
 
 /* フィギュア集め */
 
@@ -319,7 +275,6 @@
     margin-bottom: 25px;
 }
 
-
 /* FIGURE COLLECTION */
 
 .figure-en {
@@ -334,7 +289,6 @@
 
     margin-bottom: 40px;
 }
-
 
 /* 説明 */
 
@@ -387,19 +341,13 @@
 
 @media (max-width: 768px) {
 
-    .figure-hero {
-        min-height: 650px;
-    }
-
-
     .figure-track img {
-        width: 200px;
+        width: 48vw;
 
         aspect-ratio: 4 / 3;
 
         height: auto;
     }
-
 
     .figure-group {
         gap: 8px;
@@ -407,6 +355,9 @@
         padding-right: 8px;
     }
 
+    .figure-background {
+        gap: 8px;
+    }
 
     .figure-content {
         width: 100%;
@@ -414,29 +365,26 @@
         padding: 20px;
     }
 
-
     .figure-content h1 {
         font-size:
-            clamp(46px, 13vw, 62px);
+            clamp(42px, 12vw, 58px);
 
         letter-spacing: -3px;
 
         white-space: nowrap;
     }
 
-
     .figure-en {
         font-size: 10px;
 
-        letter-spacing: 5px;
+        letter-spacing: 4px;
     }
 
-
     .figure-description {
-        max-width: 340px;
+        max-width: 330px;
 
         font-size: 13px;
 
-        line-height: 2;
+        line-height: 1.9;
     }
 }
