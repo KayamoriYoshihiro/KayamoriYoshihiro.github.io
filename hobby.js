@@ -48,28 +48,13 @@ function createGroup(images) {
 
     images.forEach((src, index) => {
 
-        const img =
-            document.createElement("img");
+const img = document.createElement("img");
 
-        img.src = src;
-        img.alt = "";
+img.src = src;
+img.alt = "";
 
-        /*
-         * 少しだけ画像位置をずらす。
-         * 4:3比率自体は維持。
-         */
-        const offsets = [
-            "0px",
-            "10px",
-            "-7px",
-            "5px",
-            "-4px"
-        ];
+group.appendChild(img);
 
-        img.style.transform =
-            `translateY(${offsets[index % offsets.length]})`;
-
-        group.appendChild(img);
     });
 
     return group;

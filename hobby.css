@@ -56,7 +56,6 @@
 ======================================== */
 
 .figure-row {
-
     width: 100%;
 
     overflow: hidden;
@@ -69,6 +68,7 @@
 
 .figure-track {
     display: flex;
+
     width: max-content;
 
     will-change: transform;
@@ -80,22 +80,31 @@
         infinite;
 }
 
-/* グループ */
+
+/* ========================================
+   GROUP
+======================================== */
+
 .figure-group {
     display: flex;
 
     flex-shrink: 0;
 
-    gap: 14px;
+    gap: 12px;
 
-    padding-right: 14px;
+    /*
+     * 次のグループとの間隔を
+     * gapと同じにする
+     */
+    padding-right: 12px;
 }
 
+
 /* ========================================
-   行ごとの速度
+   行ごとの速度・方向
 ======================================== */
 
-/* 1段目：左へ */
+/* 1段目：左 */
 .row-1 .figure-track {
     animation:
         figure-scroll
@@ -104,16 +113,18 @@
         infinite;
 }
 
-/* 2段目：右へ */
+
+/* 2段目：右 */
 .row-2 .figure-track {
     animation:
         figure-scroll-reverse
-        55s
+        53s
         linear
         infinite;
 }
 
-/* 3段目：左へ、少しゆっくり */
+
+/* 3段目：左 */
 .row-3 .figure-track {
     animation:
         figure-scroll
@@ -122,25 +133,28 @@
         infinite;
 }
 
+
 /* ========================================
-   行の開始位置をずらす
+   IMAGE
 ======================================== */
 
-.row-1 {
-    transform:
-        translateX(-90px);
-}
+.figure-track img {
+    width: 320px;
 
+    aspect-ratio: 4 / 3;
+    height: auto;
 
-.row-2 {
-    transform:
-        translateX(45px);
-}
+    display: block;
 
+    flex-shrink: 0;
 
-.row-3 {
-    transform:
-        translateX(-140px);
+    object-fit: cover;
+
+    border-radius: 6px;
+
+    filter:
+        saturate(0.85)
+        brightness(0.8);
 }
 
 
@@ -151,11 +165,15 @@
 @keyframes figure-scroll {
 
     from {
-        transform: translateX(0);
+        transform: translate3d(0, 0, 0);
     }
 
     to {
-        transform: translateX(-33.333333%);
+        transform: translate3d(
+            -33.333333%,
+            0,
+            0
+        );
     }
 }
 
@@ -163,14 +181,17 @@
 @keyframes figure-scroll-reverse {
 
     from {
-        transform: translateX(-33.333333%);
+        transform: translate3d(
+            -33.333333%,
+            0,
+            0
+        );
     }
 
     to {
-        transform: translateX(0);
+        transform: translate3d(0, 0, 0);
     }
 }
-
 
 /* ========================================
    IMAGE
@@ -367,32 +388,44 @@
 @media (max-width: 768px) {
 
     .figure-hero {
-
         min-height: 650px;
     }
 
+
     .figure-track img {
         width: 200px;
+
         aspect-ratio: 4 / 3;
+
         height: auto;
     }
 
+
+    .figure-group {
+        gap: 8px;
+
+        padding-right: 8px;
+    }
+
+
     .figure-content {
+        width: 100%;
 
         padding: 20px;
     }
 
 
     .figure-content h1 {
-
-        font-size: 52px;
+        font-size:
+            clamp(46px, 13vw, 62px);
 
         letter-spacing: -3px;
+
+        white-space: nowrap;
     }
 
 
     .figure-en {
-
         font-size: 10px;
 
         letter-spacing: 5px;
@@ -400,8 +433,10 @@
 
 
     .figure-description {
+        max-width: 340px;
 
         font-size: 13px;
-    }
 
+        line-height: 2;
+    }
 }
