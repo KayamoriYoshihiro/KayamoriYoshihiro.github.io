@@ -996,6 +996,41 @@ footer a:hover {
     font-size: 55px;
 }
 
+
+/* WORKS */
+
+.works-page {
+    padding-top: 150px;
+    padding-bottom: 110px;
+}
+
+
+.works-heading {
+    margin-bottom: 60px;
+}
+
+
+.works-heading h1 {
+    font-size: 55px;
+}
+
+
+.works-grid {
+    grid-template-columns: 1fr;
+
+    gap: 65px;
+}
+
+
+.work-image {
+    border-radius: 17px;
+}
+
+
+.work-title-row h2 {
+    font-size: 30px;
+}
+
 }
 /* ========================================
    HOME PAGE
@@ -1222,4 +1257,332 @@ footer a:hover {
     font-size: 15px;
 
     line-height: 2;
+}
+
+
+/* ========================================
+   AWARDS PAGE
+======================================== */
+
+.awards-page {
+    min-height: 100vh;
+
+    padding-top: 190px;
+    padding-bottom: 150px;
+}
+
+
+.awards-page-title {
+    margin-bottom: 90px;
+}
+
+
+.awards-page-title h1 {
+    font-size:
+        clamp(60px, 9vw, 110px);
+
+    line-height: 1;
+
+    letter-spacing: -5px;
+
+    margin-bottom: 25px;
+}
+
+
+.awards-page-title > p:last-child {
+    color: #8e9aa8;
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+}
+
+
+/* ========================================
+   WORKS PAGE
+======================================== */
+
+.works-page {
+    padding-top: 190px;
+    padding-bottom: 160px;
+}
+
+
+/* HEADER */
+
+.works-heading {
+    margin-bottom: 90px;
+}
+
+
+.works-heading h1 {
+    font-size:
+        clamp(60px, 9vw, 110px);
+
+    line-height: 1;
+
+    letter-spacing: -5px;
+
+    margin-bottom: 30px;
+}
+
+
+.works-description {
+    max-width: 600px;
+
+    color: #9eabb8;
+
+    font-size: 15px;
+
+    line-height: 2;
+}
+
+
+/* ========================================
+   WORKS GRID
+======================================== */
+
+.works-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 80px 35px;
+}
+
+
+/* ========================================
+   WORK ITEM
+======================================== */
+
+.work-item {
+    display: block;
+}
+
+
+.work-image {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 10;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    background: #273340;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.work-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.6s ease;
+}
+
+
+/* HOVER */
+
+.work-item:hover .work-image {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 25px 55px
+        rgba(0, 0, 0, 0.25);
+}
+
+
+.work-item:hover .work-image img {
+    transform: scale(1.04);
+}
+
+
+/* ========================================
+   NUMBER
+======================================== */
+
+.work-number {
+    position: absolute;
+
+    top: 20px;
+    right: 20px;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(24, 33, 43, 0.85);
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    backdrop-filter: blur(10px);
+}
+
+
+/* ========================================
+   IMAGE PLACEHOLDER
+======================================== */
+
+.work-placeholder {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7764a9,
+            #a48ad2
+        );
+
+    color:
+        rgba(255, 255, 255, 0.55);
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    letter-spacing: 5px;
+}
+
+
+.work-placeholder.blue {
+    background:
+        linear-gradient(
+            135deg,
+            #377c9d,
+            #69d2ff
+        );
+}
+
+
+/* ========================================
+   INFORMATION
+======================================== */
+
+.work-info {
+    padding-top: 25px;
+}
+
+
+/* TAG */
+
+.work-meta {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 15px;
+}
+
+
+.work-meta span {
+    padding:
+        5px 12px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.13);
+
+    border-radius: 20px;
+
+    color: #8fa0af;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+
+/* TITLE */
+
+.work-title-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+
+.work-title-row h2 {
+    font-size:
+        clamp(28px, 4vw, 42px);
+
+    letter-spacing: -1px;
+}
+
+
+.work-arrow {
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.16);
+
+    border-radius: 50%;
+
+    color: #69d2ff;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.work-item:hover .work-arrow {
+    background: #69d2ff;
+
+    color: #18212b;
+
+    transform:
+        translate(3px, -3px);
+}
+
+
+/* DESCRIPTION */
+
+.work-info > p {
+    color: #929eaa;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    max-width: 520px;
 }
