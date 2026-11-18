@@ -68,33 +68,107 @@
 ======================================== */
 
 .figure-track {
-
     display: flex;
-
     width: max-content;
 
-    gap: 8px;
+    will-change: transform;
 
     animation:
-        figure-scroll 32s linear infinite;
+        figure-scroll
+        42s
+        linear
+        infinite;
 }
 
+/* グループ */
+.figure-group {
+    display: flex;
 
-/* 逆方向 */
+    flex-shrink: 0;
 
-.figure-track.reverse {
+    gap: 14px;
 
+    padding-right: 14px;
+}
+
+/* ========================================
+   行ごとの速度
+======================================== */
+
+/* 1段目：左へ */
+.row-1 .figure-track {
+    animation:
+        figure-scroll
+        42s
+        linear
+        infinite;
+}
+
+/* 2段目：右へ */
+.row-2 .figure-track {
     animation:
         figure-scroll-reverse
-        38s linear infinite;
+        55s
+        linear
+        infinite;
+}
+
+/* 3段目：左へ、少しゆっくり */
+.row-3 .figure-track {
+    animation:
+        figure-scroll
+        47s
+        linear
+        infinite;
+}
+
+/* ========================================
+   行の開始位置をずらす
+======================================== */
+
+.row-1 {
+    transform:
+        translateX(-90px);
 }
 
 
-/* 少し遅い列 */
+.row-2 {
+    transform:
+        translateX(45px);
+}
 
-.figure-track.slow {
 
-    animation-duration: 45s;
+.row-3 {
+    transform:
+        translateX(-140px);
+}
+
+
+/* ========================================
+   ANIMATION
+======================================== */
+
+@keyframes figure-scroll {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-33.333333%);
+    }
+}
+
+
+@keyframes figure-scroll-reverse {
+
+    from {
+        transform: translateX(-33.333333%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
 }
 
 
@@ -131,7 +205,7 @@
     }
 
     to {
-        transform: translateX(-50%);
+        transform: translateX(-33.333333%);
     }
 
 }
@@ -140,7 +214,7 @@
 @keyframes figure-scroll-reverse {
 
     from {
-        transform: translateX(-50%);
+        transform: translateX(-33.333333%);
     }
 
     to {
