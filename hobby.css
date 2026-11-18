@@ -402,6 +402,194 @@
 
 
 /* ========================================
+   CLICKABLE FIGURE
+======================================== */
+
+.figure-frame {
+    cursor: pointer;
+}
+
+.figure-frame img {
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+}
+
+.figure-frame:hover img {
+    transform: scale(1.025);
+
+    filter:
+        saturate(1)
+        brightness(0.95);
+}
+
+
+/* ========================================
+   LIGHTBOX
+======================================== */
+
+.figure-lightbox {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 10000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+
+    background:
+        rgba(8, 12, 17, 0.88);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+
+/* 表示中 */
+
+.figure-lightbox.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* ========================================
+   LARGE IMAGE
+======================================== */
+
+.figure-lightbox img {
+    display: block;
+
+    /*
+     * 4:3を維持しながら
+     * 画面内いっぱいに表示
+     */
+    width: auto;
+    height: auto;
+
+    max-width: 90vw;
+    max-height: 85vh;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 30px 80px
+        rgba(0, 0, 0, 0.55);
+
+    transform: scale(0.94);
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.figure-lightbox.active img {
+    transform: scale(1);
+}
+
+
+/* ========================================
+   CLOSE BUTTON
+======================================== */
+
+.lightbox-close {
+    position: absolute;
+
+    top: 30px;
+    right: 35px;
+
+    width: 52px;
+    height: 52px;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.25);
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    color: #ffffff;
+
+    font-size: 30px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.lightbox-close:hover {
+    background:
+        rgba(255, 255, 255, 0.16);
+
+    transform: rotate(90deg);
+}
+
+
+/* ========================================
+   ライトボックス表示中
+======================================== */
+
+body.lightbox-open {
+    overflow: hidden;
+}
+
+
+/* 背景アニメーション停止 */
+
+body.lightbox-open .figure-track {
+    animation-play-state: paused;
+}
+
+
+/* ========================================
+   SMARTPHONE LIGHTBOX
+======================================== */
+
+@media (max-width: 768px) {
+
+    .figure-lightbox {
+        padding: 20px;
+    }
+
+    .figure-lightbox img {
+        max-width: 94vw;
+        max-height: 80vh;
+
+        border-radius: 8px;
+    }
+
+    .lightbox-close {
+        top: 18px;
+        right: 18px;
+
+        width: 44px;
+        height: 44px;
+
+        font-size: 26px;
+    }
+}
+
+
+/* ========================================
    SMARTPHONE
 ======================================== */
 

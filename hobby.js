@@ -95,3 +95,116 @@ document
         track.appendChild(group3);
 
     });
+
+    
+    /* =========================
+   LIGHTBOX
+========================= */
+
+const lightbox =
+    document.getElementById("figureLightbox");
+
+const lightboxImage =
+    document.getElementById("lightboxImage");
+
+const lightboxClose =
+    document.getElementById("lightboxClose");
+
+
+/* =========================
+   画像クリック
+========================= */
+
+document.addEventListener("click", (event) => {
+
+    const image =
+        event.target.closest(".figure-frame img");
+
+    if (!image) {
+        return;
+    }
+
+    lightboxImage.src = image.src;
+    lightboxImage.alt = image.alt;
+
+    lightbox.classList.add("active");
+
+    document.body.classList.add(
+        "lightbox-open"
+    );
+});
+
+
+/* =========================
+   CLOSE
+========================= */
+
+function closeLightbox() {
+
+    lightbox.classList.remove("active");
+
+    document.body.classList.remove(
+        "lightbox-open"
+    );
+
+    /*
+     * 閉じるアニメーション後に
+     * 画像を解除
+     */
+    setTimeout(() => {
+
+        if (
+            !lightbox.classList.contains(
+                "active"
+            )
+        ) {
+            lightboxImage.src = "";
+        }
+
+    }, 300);
+}
+
+
+lightboxClose.addEventListener(
+    "click",
+    closeLightbox
+);
+
+
+/* =========================
+   背景クリックで閉じる
+========================= */
+
+lightbox.addEventListener(
+    "click",
+    (event) => {
+
+        if (event.target === lightbox) {
+            closeLightbox();
+        }
+
+    }
+);
+
+
+/* =========================
+   ESCで閉じる
+========================= */
+
+document.addEventListener(
+    "keydown",
+    (event) => {
+
+        if (
+            event.key === "Escape" &&
+            lightbox.classList.contains(
+                "active"
+            )
+        ) {
+
+            closeLightbox();
+
+        }
+
+    }
+);
