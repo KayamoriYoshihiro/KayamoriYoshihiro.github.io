@@ -36,15 +36,16 @@
 .figure-background {
     position: absolute;
 
-    inset: 0;
+    inset: 70px 0 0;
 
     display: flex;
-
     flex-direction: column;
 
     justify-content: center;
 
-    gap: 12px;
+    gap: 10px;
+
+    overflow: hidden;
 }
 
 
@@ -56,6 +57,8 @@
     width: 100%;
 
     overflow: hidden;
+
+    flex-shrink: 0;
 }
 
 
@@ -87,13 +90,9 @@
 
     flex-shrink: 0;
 
-    gap: 12px;
+    gap: 10px;
 
-    /*
-     * 次のグループとの間隔を
-     * gapと同じにする
-     */
-    padding-right: 12px;
+    padding-right: 10px;
 }
 
 
@@ -300,12 +299,19 @@
 ======================================== */
 
 .figure-frame {
-    width: 32vw;
+    /*
+     * 横：画面に約3枚
+     * 縦：画面に約3段
+     *
+     * 小さい方を採用するので
+     * 画面サイズが変わっても破綻しにくい
+     */
+    width: min(
+        32vw,
+        calc((100vh - 110px) * 4 / 9)
+    );
 
-    /* 4K用 */
-    min-width: 600px;
-
-    /* 完全4:3 */
+    /* 4:3を完全固定 */
     aspect-ratio: 4 / 3;
 
     flex: 0 0 auto;
@@ -315,6 +321,20 @@
     border-radius: 10px;
 
     background: #18212b;
+}
+
+.figure-frame img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    filter:
+        saturate(0.85)
+        brightness(0.8);
 }
 
 /* 枠の中の画像 */
@@ -357,55 +377,24 @@
 @media (max-width: 768px) {
 
     .figure-frame {
-        width: 75vw;
-
-        min-width: 0;
+        width: 68vw;
 
         aspect-ratio: 4 / 3;
 
-        border-radius: 8px;
+        min-width: 0;
     }
 
 
-    .figure-frame img {
-        width: 100%;
-        height: 100%;
+    .figure-background {
+        inset: 90px 0 0;
 
-        object-fit: cover;
+        gap: 8px;
     }
+
 
     .figure-group {
         gap: 8px;
+
         padding-right: 8px;
-    }
-
-    .figure-background {
-        gap: 8px;
-    }
-
-    .figure-content {
-        width: 100%;
-        padding: 20px;
-    }
-
-    .figure-content h1 {
-        font-size:
-            clamp(42px, 12vw, 58px);
-
-        letter-spacing: -3px;
-
-        white-space: nowrap;
-    }
-
-    .figure-en {
-        font-size: 10px;
-        letter-spacing: 4px;
-    }
-
-    .figure-description {
-        max-width: 330px;
-
-        font-size: 13px;
-        line-height: 1.9;
     }
 }
