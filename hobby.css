@@ -41,10 +41,6 @@
     top: 70px;
     left: 0;
     right: 0;
-
-    /*
-     * 下側は画面外にはみ出してOK
-     */
     bottom: auto;
 
     display: flex;
@@ -55,7 +51,10 @@
     gap: 10px;
 
     overflow: visible;
+
+    z-index: 0;
 }
+
 
 /* ========================================
    ROW
@@ -186,6 +185,8 @@
 
     z-index: 1;
 
+    pointer-events: none;
+
     background:
         linear-gradient(
             90deg,
@@ -205,6 +206,8 @@
     position: relative;
 
     z-index: 2;
+
+    pointer-events: none;
 
     text-align: center;
 
@@ -282,10 +285,11 @@
 ======================================== */
 
 .figure-frame {
+    position: relative;
+
+    z-index: 1;
 
     width: clamp(360px, 31vw, 720px);
-
-    /* 必ず4:3 */
     aspect-ratio: 4 / 3;
 
     flex: 0 0 auto;
@@ -295,6 +299,9 @@
     border-radius: 10px;
 
     background: #18212b;
+
+    cursor: pointer;
+    pointer-events: auto;
 }
 
 
