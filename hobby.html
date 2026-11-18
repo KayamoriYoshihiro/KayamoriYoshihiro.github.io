@@ -3,76 +3,166 @@
 
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Favorite Game | 榧森由浩</title>
+    <title>Figure Collection | 榧森由浩</title>
 
-    <link rel="stylesheet"
-          href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hobby.css">
 </head>
 
-<body>
 
+<body class="hobby-page">
+
+    <!-- HEADER -->
     <header>
 
         <div class="header-inner">
 
-<a href="index.html"
-   class="logo">
-    KAYAMORI YOSHIHIRO
-</a>
+            <a href="index.html" class="logo">
+                KAYAMORI YOSHIHIRO
+            </a>
 
-<nav>
+            <nav>
 
-    <a href="index.html">
-        HOME
-    </a>
+                <a href="index.html">
+                    HOME
+                </a>
 
-    <a href="about.html">
-        ABOUT
-    </a>
+                <a href="about.html">
+                    ABOUT
+                </a>
 
-    <a href="works.html">
-        WORKS
-    </a>
+                <a href="works.html">
+                    WORKS
+                </a>
 
-    <a href="awards.html">
-        AWARDS
-    </a>
+                <a href="awards.html">
+                    AWARDS
+                </a>
 
-</nav>
+            </nav>
 
         </div>
 
     </header>
 
 
-    <main>
+    <main class="figure-hero">
 
-        <section class="hero">
+        <!-- ============================
+             流れる写真
+        ============================= -->
 
-            <div class="hero-label">
-                MY FAVORITE HOBBY
+        <div class="figure-background">
+
+
+            <!-- 1段目 -->
+            <div class="figure-row">
+
+                <div class="figure-track">
+
+                    <img src="images/figures/figure01.jpg" alt="">
+                    <img src="images/figures/figure02.jpg" alt="">
+                    <img src="images/figures/figure03.jpg" alt="">
+                    <img src="images/figures/figure04.jpg" alt="">
+                    <img src="images/figures/figure05.jpg" alt="">
+                    <img src="images/figures/figure06.jpg" alt="">
+
+                    <!-- 無限ループ用に同じ画像 -->
+                    <img src="images/figures/figure01.jpg" alt="">
+                    <img src="images/figures/figure02.jpg" alt="">
+                    <img src="images/figures/figure03.jpg" alt="">
+                    <img src="images/figures/figure04.jpg" alt="">
+                    <img src="images/figures/figure05.jpg" alt="">
+                    <img src="images/figures/figure06.jpg" alt="">
+
+                </div>
+
             </div>
 
-            <div class="hero-title">
 
-                <p class="hello">
-                    FAVORITE GAME
-                </p>
+            <!-- 2段目 -->
+            <div class="figure-row">
 
-                <h1>
-                    フィギュア集め
-                </h1>
+                <div class="figure-track reverse">
 
-                <p class="english-name">
-                    趣味
-                </p>
+                    <img src="images/figures/figure07.jpg" alt="">
+                    <img src="images/figures/figure08.jpg" alt="">
+                    <img src="images/figures/figure09.jpg" alt="">
+                    <img src="images/figures/figure10.jpg" alt="">
+                    <img src="images/figures/figure02.jpg" alt="">
+                    <img src="images/figures/figure05.jpg" alt="">
+
+                    <img src="images/figures/figure07.jpg" alt="">
+                    <img src="images/figures/figure08.jpg" alt="">
+                    <img src="images/figures/figure09.jpg" alt="">
+                    <img src="images/figures/figure10.jpg" alt="">
+                    <img src="images/figures/figure02.jpg" alt="">
+                    <img src="images/figures/figure05.jpg" alt="">
+
+                </div>
 
             </div>
 
-        </section>
+
+            <!-- 3段目 -->
+            <div class="figure-row">
+
+                <div class="figure-track slow">
+
+                    <img src="images/figures/figure03.jpg" alt="">
+                    <img src="images/figures/figure06.jpg" alt="">
+                    <img src="images/figures/figure01.jpg" alt="">
+                    <img src="images/figures/figure09.jpg" alt="">
+                    <img src="images/figures/figure04.jpg" alt="">
+                    <img src="images/figures/figure08.jpg" alt="">
+
+                    <img src="images/figures/figure03.jpg" alt="">
+                    <img src="images/figures/figure06.jpg" alt="">
+                    <img src="images/figures/figure01.jpg" alt="">
+                    <img src="images/figures/figure09.jpg" alt="">
+                    <img src="images/figures/figure04.jpg" alt="">
+                    <img src="images/figures/figure08.jpg" alt="">
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 暗いフィルター -->
+
+        <div class="figure-overlay"></div>
+
+
+        <!-- ============================
+             中央文字
+        ============================= -->
+
+        <div class="figure-content">
+
+            <p class="figure-label">
+                MY HOBBY
+            </p>
+
+            <h1>
+                フィギュア集め
+            </h1>
+
+            <p class="figure-en">
+                FIGURE COLLECTION
+            </p>
+
+            <p class="figure-description">
+                好きな作品やキャラクターのフィギュアを
+                集めることが趣味です。
+            </p>
+
+        </div>
 
     </main>
 
