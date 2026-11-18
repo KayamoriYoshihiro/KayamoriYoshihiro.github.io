@@ -374,6 +374,124 @@ section {
 
 
 /* ========================================
+   AWARDS
+======================================== */
+
+.awards {
+    padding-top: 130px;
+    padding-bottom: 150px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.09);
+}
+
+
+/* HEADER */
+
+.awards-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: end;
+
+    margin-bottom: 60px;
+}
+
+
+.awards-header h2 {
+    font-size:
+        clamp(38px, 5vw, 60px);
+
+    letter-spacing: -2px;
+}
+
+
+.awards-intro {
+    max-width: 390px;
+
+    color: #9eabb8;
+
+    font-size: 14px;
+}
+
+
+/* LIST */
+
+.award-list {
+    border-top:
+        1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+.award-item {
+    display: grid;
+
+    grid-template-columns:
+        160px 1fr;
+
+    gap: 40px;
+
+    padding:
+        38px 10px;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.12);
+
+    transition:
+        padding-left 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.award-item:hover {
+    padding-left: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+}
+
+
+/* 年 */
+
+.award-date {
+    color: #69d2ff;
+
+    font-size: 22px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+/* 内容 */
+
+.award-type {
+    color: #69d2ff;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 8px;
+}
+
+
+.award-content h3 {
+    font-size: 22px;
+
+    margin-bottom: 8px;
+}
+
+
+.award-content > p:last-child {
+    color: #929daa;
+
+    font-size: 14px;
+}
+
+
+/* ========================================
    FAVORITES
 ======================================== */
 
@@ -732,6 +850,36 @@ footer a:hover {
 
         border-radius: 18px;
     }
+
+
+    /* AWARDS */
+
+.awards {
+    padding-top: 90px;
+    padding-bottom: 110px;
+}
+
+.awards-header {
+    display: block;
+
+    margin-bottom: 40px;
+}
+
+.awards-intro {
+    margin-top: 20px;
+}
+
+.award-item {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+
+    padding: 30px 5px;
+}
+
+.award-item:hover {
+    padding-left: 5px;
+}
 
 
     /* FAVORITE */
