@@ -34,7 +34,6 @@
 ======================================== */
 
 .figure-background {
-
     position: absolute;
 
     inset: 0;
@@ -45,7 +44,7 @@
 
     justify-content: center;
 
-    gap: 8px;
+    gap: 12px;
 }
 
 
@@ -135,23 +134,12 @@
 }
 
 
-/* 4段目：右 */
-
-.row-4 .figure-track {
-    animation:
-        figure-scroll-reverse
-        52s
-        linear
-        infinite;
-}
-
-
 /* ========================================
    IMAGE
 ======================================== */
 
 .figure-track img {
-    width: clamp(360px, 24vw, 460px);
+    width: clamp(480px, 32vw, 620px);
 
     aspect-ratio: 4 / 3;
     height: auto;
@@ -161,7 +149,7 @@
 
     object-fit: cover;
 
-    border-radius: 8px;
+    border-radius: 10px;
 
     filter:
         saturate(0.85)
@@ -342,7 +330,7 @@
 @media (max-width: 768px) {
 
     .figure-track img {
-        width: 48vw;
+        width: 68vw;
 
         aspect-ratio: 4 / 3;
 
@@ -351,7 +339,6 @@
 
     .figure-group {
         gap: 8px;
-
         padding-right: 8px;
     }
 
@@ -361,7 +348,6 @@
 
     .figure-content {
         width: 100%;
-
         padding: 20px;
     }
 
@@ -376,7 +362,6 @@
 
     .figure-en {
         font-size: 10px;
-
         letter-spacing: 4px;
     }
 
@@ -384,7 +369,6 @@
         max-width: 330px;
 
         font-size: 13px;
-
         line-height: 1.9;
     }
 }
