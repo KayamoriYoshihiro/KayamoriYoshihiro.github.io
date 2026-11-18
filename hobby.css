@@ -296,15 +296,41 @@
 
 
 /* ========================================
-   HOVER
+   4:3 IMAGE FRAME
 ======================================== */
 
-.figure-hero:hover
-.figure-track img {
+.figure-frame {
+    width: 32vw;
+
+    /* 4K用 */
+    min-width: 600px;
+
+    /* 完全4:3 */
+    aspect-ratio: 4 / 3;
+
+    flex: 0 0 auto;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background: #18212b;
+}
+
+/* 枠の中の画像 */
+
+.figure-frame img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
 
     filter:
-        saturate(1)
-        brightness(0.9);
+        saturate(0.85)
+        brightness(0.8);
 }
 
 
@@ -330,14 +356,20 @@
 
 @media (max-width: 768px) {
 
-    .figure-track img {
+    .figure-frame {
         width: 75vw;
+
         min-width: 0;
 
         aspect-ratio: 4 / 3;
-        height: auto;
 
-        flex: 0 0 auto;
+        border-radius: 8px;
+    }
+
+
+    .figure-frame img {
+        width: 100%;
+        height: 100%;
 
         object-fit: cover;
     }

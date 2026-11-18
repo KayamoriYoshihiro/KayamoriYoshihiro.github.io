@@ -40,21 +40,22 @@ function shuffle(array) {
 
 function createGroup(images) {
 
-    const group =
-        document.createElement("div");
+    const group = document.createElement("div");
+    group.className = "figure-group";
 
-    group.className =
-        "figure-group";
+    images.forEach((src) => {
 
-    images.forEach((src, index) => {
+        // 4:3固定の枠
+        const frame = document.createElement("div");
+        frame.className = "figure-frame";
 
-const img = document.createElement("img");
+        const img = document.createElement("img");
 
-img.src = src;
-img.alt = "";
+        img.src = src;
+        img.alt = "";
 
-group.appendChild(img);
-
+        frame.appendChild(img);
+        group.appendChild(frame);
     });
 
     return group;
